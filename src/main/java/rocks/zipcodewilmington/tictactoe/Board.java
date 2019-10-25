@@ -9,7 +9,7 @@ public class Board {
     }
     public Boolean checkHorizontal(Character xO){
         for(int i = 0; i <= 2; i++){
-            if((board[0][i] == xO) && (board[1][i] == xO) &&(board[2][i] == xO)){
+            if((board[i][0] == xO) && (board[i][1] == xO) &&(board[i][2] == xO)){
                 return true;
             }
         }
@@ -25,7 +25,7 @@ public class Board {
     }
     public Boolean checkDiagonal(Character xO){
         if ((board[0][0] == xO) && (board[1][1] == xO) && (board[2][2] == xO) ||
-                (board[0][0] == xO) && (board[1][1] == xO) && (board[2][2] == xO)){
+                (board[2][0] == xO) && (board[1][1] == xO) && (board[0][2] == xO)){
             return true;
         }else{
             return false;
